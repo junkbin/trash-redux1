@@ -1,13 +1,17 @@
 /**
  * Redux sample example @backend
  */
-import { createStore } from 'redux'
+import store from './StateStore';
 
 class Main{
     static helloRedux() {
         try{
-            console.log("Hello Redux!!!");
-            console.log(createStore);
+            store.dispatch({ type: 'INCREMENT' });
+
+            store.dispatch({ type: 'INCREMENT' });
+
+            store.dispatch({ type: 'DECREMENT' });
+
         }catch(err){
             throw err;
         }
@@ -15,12 +19,15 @@ class Main{
 
     static main(){
         try{
-           Main.helloRedux(); 
+            store.subscribe(() => {
+                console.log(store.getState())
+            });
+            
+            Main.helloRedux(); 
         }catch(err){
             console.error(err);
         }
     }
 }
-
 
 Main.main();
