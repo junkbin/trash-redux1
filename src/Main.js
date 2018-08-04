@@ -4,7 +4,7 @@
 import store from './StateStore';
 
 class Main{
-    static helloRedux() {
+    static reduxAction() {
         try{
             store.dispatch({ type: 'INCREMENT' });
 
@@ -23,7 +23,7 @@ class Main{
                 console.log(store.getState())
             });
             
-            Main.helloRedux(); 
+            Main.reduxAction(); 
         }catch(err){
             console.error(err);
         }
