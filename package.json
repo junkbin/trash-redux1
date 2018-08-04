@@ -1,0 +1,12 @@
+{
+  "name": "trash-redux1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev" : "tsc -w -p tsconfig.json"
+  },
+  "dependencies": {
+    "redux": "^4.0.0"
+  }
+}
